@@ -13,6 +13,9 @@
 		4A54A8F12818B32900D00A36 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A54A8F02818B32900D00A36 /* Preview Assets.xcassets */; };
 		4A54A8F32818B32900D00A36 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54A8F22818B32900D00A36 /* Persistence.swift */; };
 		4A54A8F62818B32900D00A36 /* CoreDataBase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4A54A8F42818B32900D00A36 /* CoreDataBase.xcdatamodeld */; };
+		4A54A90C2818BA2C00D00A36 /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54A90B2818BA2C00D00A36 /* UserStorage.swift */; };
+		4A54A90F2818BA6800D00A36 /* StorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54A90E2818BA6800D00A36 /* StorageProtocol.swift */; };
+		4A54A9112818BECB00D00A36 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54A9102818BECB00D00A36 /* UserViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		4A54A8F02818B32900D00A36 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4A54A8F22818B32900D00A36 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		4A54A8F52818B32900D00A36 /* CoreDataBase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataBase.xcdatamodel; sourceTree = "<group>"; };
+		4A54A90B2818BA2C00D00A36 /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
+		4A54A90E2818BA6800D00A36 /* StorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageProtocol.swift; sourceTree = "<group>"; };
+		4A54A9102818BECB00D00A36 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +61,9 @@
 		4A54A8E82818B32800D00A36 /* CoreDataBase */ = {
 			isa = PBXGroup;
 			children = (
-				4A54A8E92818B32800D00A36 /* CoreDataBaseApp.swift */,
-				4A54A8EB2818B32800D00A36 /* ContentView.swift */,
-				4A54A8ED2818B32900D00A36 /* Assets.xcassets */,
-				4A54A8F22818B32900D00A36 /* Persistence.swift */,
-				4A54A8F42818B32900D00A36 /* CoreDataBase.xcdatamodeld */,
+				4A54A8FE2818B49E00D00A36 /* SupportFiles */,
+				4A54A8FD2818B49700D00A36 /* Source */,
+				4A54A8FC2818B48D00D00A36 /* Resources */,
 				4A54A8EF2818B32900D00A36 /* Preview Content */,
 			);
 			path = CoreDataBase;
@@ -71,6 +75,91 @@
 				4A54A8F02818B32900D00A36 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4A54A8FC2818B48D00D00A36 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4A54A8ED2818B32900D00A36 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4A54A8FD2818B49700D00A36 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				4A54A90D2818BA5900D00A36 /* Protocols */,
+				4A54A9032818B50A00D00A36 /* ViewModels */,
+				4A54A9022818B50400D00A36 /* Models */,
+				4A54A9012818B4EB00D00A36 /* Views */,
+				4A54A8FF2818B4D000D00A36 /* CoreData */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		4A54A8FE2818B49E00D00A36 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				4A54A8E92818B32800D00A36 /* CoreDataBaseApp.swift */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		4A54A8FF2818B4D000D00A36 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				4A54A90A2818BA0800D00A36 /* Storage  */,
+				4A54A9092818B9FB00D00A36 /* Config */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		4A54A9012818B4EB00D00A36 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4A54A8EB2818B32800D00A36 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4A54A9022818B50400D00A36 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4A54A9032818B50A00D00A36 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4A54A9102818BECB00D00A36 /* UserViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4A54A9092818B9FB00D00A36 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				4A54A8F22818B32900D00A36 /* Persistence.swift */,
+				4A54A8F42818B32900D00A36 /* CoreDataBase.xcdatamodeld */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		4A54A90A2818BA0800D00A36 /* Storage  */ = {
+			isa = PBXGroup;
+			children = (
+				4A54A90B2818BA2C00D00A36 /* UserStorage.swift */,
+			);
+			path = "Storage ";
+			sourceTree = "<group>";
+		};
+		4A54A90D2818BA5900D00A36 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4A54A90E2818BA6800D00A36 /* StorageProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,9 +233,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A54A8F32818B32900D00A36 /* Persistence.swift in Sources */,
+				4A54A90F2818BA6800D00A36 /* StorageProtocol.swift in Sources */,
 				4A54A8EC2818B32800D00A36 /* ContentView.swift in Sources */,
 				4A54A8EA2818B32800D00A36 /* CoreDataBaseApp.swift in Sources */,
 				4A54A8F62818B32900D00A36 /* CoreDataBase.xcdatamodeld in Sources */,
+				4A54A9112818BECB00D00A36 /* UserViewModel.swift in Sources */,
+				4A54A90C2818BA2C00D00A36 /* UserStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
